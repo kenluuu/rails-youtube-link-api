@@ -14,7 +14,7 @@ class Api::V1::UsersController < ApplicationController
             access_token: access_token
         )
         if user.save 
-            render json: {data: 'success'}
+            render json: {access_token: access_token}
         else
             render json: {data: 'failure'}
         
